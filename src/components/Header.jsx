@@ -1,5 +1,8 @@
-import React from 'react'
+import React from 'react';
 import '../css/Header.css';
+import { CiShoppingBasket } from "react-icons/ci";
+import { CiLight } from "react-icons/ci";
+import { FaMoon } from "react-icons/fa";
 
 function Header() {
     return (
@@ -11,6 +14,11 @@ function Header() {
 
             <div>
                 <input className='search-input ' type="text" placeholder='Search...' />
+                <div>
+                    <CiShoppingBasket />
+                    <CiLight />
+                    <FaMoon />
+                </div>
             </div>
         </div>
     )
