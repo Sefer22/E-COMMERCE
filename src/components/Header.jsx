@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/Header.css';
 import { CiShoppingBasket } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
 
 function Header() {
+
+    const [theme, setTheme] = useState(false);
+
+    const changeTheme = () => {
+
+    }
+
     return (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
             <div className='flex-row'>
@@ -12,12 +19,12 @@ function Header() {
                 <p className='logo-text'>Safar C.</p>
             </div>
 
-            <div>
+            <div className='flex-row'>
                 <input className='search-input ' type="text" placeholder='Search...' />
                 <div>
-                    <CiShoppingBasket />
-                    <CiLight />
-                    <FaMoon />
+                    <CiShoppingBasket className='icon' />
+                    {/* <CiLight className='icon' /> */}
+                    <FaMoon className='icon' />
                 </div>
             </div>
         </div>
