@@ -6,7 +6,7 @@ function Header() {
         <div>
             <div>
                 <img className="logo" src="./src/images/logo.png" />
-                <p>Safar C.</p>
+                <p className='logo-text'>Safar C.</p>
             </div>
         </div>
     )
