@@ -2,8 +2,7 @@ import Container from '@mui/material/Container';
 import React from 'react'
 
 function PageContainer({ children }) {
-    return
-    (
+    return (
         <Container>{children}</Container>
     )
 }
