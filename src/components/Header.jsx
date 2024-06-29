@@ -13,7 +13,10 @@ function Header() {
         setTheme(!theme);
         if (theme) {
             root.style.backgroundColor = "black";
-            root.style.color = "#fff"
+            root.style.color = "#fff";
+        } else {
+            root.style.backgroundColor = "#fff";
+            root.style.color = "black";
         }
     }
 
@@ -27,8 +30,7 @@ function Header() {
             <div className='flex-row'>
                 <input className='search-input ' type="text" placeholder='Search...' />
                 <div>
-                    <CiLight className='icon' onClick={changeTheme} />
-                    {/* <FaMoon className='icon' /> */}
+                    {theme ? <FaMoon className='icon' /> : <CiLight className='icon' onClick={changeTheme} />}
                     <CiShoppingBasket className='icon' />
                 </div>
             </div>
