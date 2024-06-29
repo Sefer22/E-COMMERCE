@@ -10,7 +10,7 @@ function Header() {
             </div>
 
             <div>
-                <input type="text" />
+                <input className='search-input ' type="text" placeholder='Search...' />
             </div>
         </div>
     )
