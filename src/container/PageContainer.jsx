@@ -3,7 +3,7 @@ import React from 'react'
 
 function PageContainer({ children }) {
     return (
-        <Container>{children}</Container>
+        <Container maxWidth="lg">{children}</Container>
     )
 }
 
