@@ -9,7 +9,12 @@ function Header() {
     const [theme, setTheme] = useState(false);
 
     const changeTheme = () => {
-
+        const root = document.getElementById('root');
+        setTheme(!theme);
+        if (theme) {
+            root.style.backgroundColor = "black";
+            root.style.color = "#fff"
+        }
     }
 
     return (
@@ -22,9 +27,9 @@ function Header() {
             <div className='flex-row'>
                 <input className='search-input ' type="text" placeholder='Search...' />
                 <div>
+                    <CiLight className='icon' onClick={changeTheme} />
+                    {/* <FaMoon className='icon' /> */}
                     <CiShoppingBasket className='icon' />
-                    {/* <CiLight className='icon' /> */}
-                    <FaMoon className='icon' />
                 </div>
             </div>
         </div>
