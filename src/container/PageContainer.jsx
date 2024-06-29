@@ -1,15 +1,10 @@
-import { Container } from '@mui/material'
-import React from 'react'
 import Container from '@mui/material/Container';
+import React from 'react'
 
-
-
-function PageContainer(children) {
+function PageContainer({ children }) {
     return
     (
-        <Container>
-
-        </Container>
+        <Container>{children}</Container>
     )
 }
 
