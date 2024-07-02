@@ -1,9 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 const initalState = {
     product: [],
-    selectedProduct: {}
+    selectedProduct: {},
+    loading: false
 }
+
+const BASE_URL = "https://fakestoreapi.com/products"
+
+export const getAllProducts = createAsyncThunk("getAllProducts", async () => {
+
+})
 
 export const productSlice = createSlice({
     name: "product",
