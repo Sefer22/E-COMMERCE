@@ -11,7 +11,11 @@ export const productSlice = createSlice({
     reducers: {
 
     },
-    extraReducers: {
+    extraReducers: (builder) => {
 
     }
 })
+
+export const { } = productSlice.actions
+
+export default productSlice.reducer
