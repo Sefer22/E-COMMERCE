@@ -4,8 +4,12 @@ import '../css/Product.css';
 function Product({ product }) {
     const { id, price, image, title, description } = product;
     return (
-        <div>
+        <div className='card'>
             <img className='image' src={image} />
+            <div>
+                <p>{title}</p>
+                <h3>{price}</h3>
+            </div>
         </div>
     )
 }
