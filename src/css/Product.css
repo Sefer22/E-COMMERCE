@@ -10,3 +10,8 @@
     border-radius: 10px;
     margin: 10px;
 }
+
+.card:hover {
+    box-shadow: 1px 4px 3px rgb(139, 139, 139);
+    transition: all 0.3s;
+}

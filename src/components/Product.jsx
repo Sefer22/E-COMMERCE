@@ -7,8 +7,8 @@ function Product({ product }) {
         <div className='card'>
             <img className='image' src={image} alt="" />
             <div>
-                <p style={{ textAlign: 'center' }}>{title}</p>
-                <h3 style={{ textAlign: 'center' }}>{price}</h3>
+                <p style={{ textAlign: 'center', height: '50px' }}>{title}</p>
+                <h3 style={{ textAlign: 'center' }}>{price} AZN</h3>
             </div>
         </div>
     )
