@@ -12,7 +12,6 @@ function App() {
       <PageContainer>
         <Header />
         <RouterConfig />
-
       </PageContainer>
     </div>
   )
