@@ -5,6 +5,8 @@
 
 .card {
     width: 200;
-    height: 400px;
+    height: 420px;
     box-shadow: 1px 4px 3px lightgrey;
+    border-radius: 10px;
+    margin: 10px;
 }
