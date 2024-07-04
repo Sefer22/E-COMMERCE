@@ -7,6 +7,8 @@ function ProductDetails() {
     const { id } = useParams();
     const { products, selectedProduct } = useSelector((store) => store.product);
 
+    const { price, image, title, description } = selectedProduct;
+
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -22,7 +24,16 @@ function ProductDetails() {
     }
 
     return (
-        <div>{selectedProduct.title}</div>
+        <div style={{ marginTop: '30px' }}>
+            <div>
+                <img src={image} width={300} height={500} alt="" />
+            </div>
+            <div>
+                <h2>{title}</h2>
+                <h3>{description}</h3>
+                <h1>{price}</h1>
+            </div>
+        </div>
     )
 }
 
