@@ -39,7 +39,7 @@ function ProductDetails() {
                     <CiCircleMinus style={{ fontSize: '40px', marginLeft: '5px' }} />
                 </div>
                 <div>
-                    <button style={{ marginTop: '25px', border: 'none', padding: '20px', backgroundColor: 'orange', borderRadius: '5px' }}>Add to basket</button>
+                    <button style={{ marginTop: '25px', border: 'none', padding: '10px', color: '#fff', backgroundColor: 'orange', borderRadius: '5px' }}>Add to basket</button>
                 </div>
             </div>
         </div>
