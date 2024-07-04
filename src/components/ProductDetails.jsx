@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { setSelectedProduct } from '../redux/slices/productSlice';
+import { CiCirclePlus } from "react-icons/ci";
 
 function ProductDetails() {
     const { id } = useParams();
@@ -24,14 +25,14 @@ function ProductDetails() {
     }
 
     return (
-        <div style={{ marginTop: '30px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ marginTop: '30px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
             <div style={{ marginRight: '40px' }}>
                 <img src={image} width={300} height={500} alt="" />
             </div>
             <div>
-                <h2>{title}</h2>
-                <h3>{description}</h3>
-                <h1>{price}</h1>
+                <h1 style={{ fontFamily: 'arial' }}>{title}</h1>
+                <p style={{ fontFamily: 'arial', fontSize: '20px' }}>{description}</p>
+                <h1 style={{ fontSize: '50px', fontFamily: 'arial', fontWeight: 'bold', color: 'red' }}>{price} AZN</h1>
             </div>
         </div>
     )
