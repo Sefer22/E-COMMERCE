@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { setSelectedProduct } from '../redux/slices/productSlice';
 import { CiCirclePlus } from "react-icons/ci";
+import { CiCircleMinus } from "react-icons/ci";
 
 function ProductDetails() {
     const { id } = useParams();
@@ -33,6 +34,10 @@ function ProductDetails() {
                 <h1 style={{ fontFamily: 'arial' }}>{title}</h1>
                 <p style={{ fontFamily: 'arial', fontSize: '20px' }}>{description}</p>
                 <h1 style={{ fontSize: '50px', fontFamily: 'arial', fontWeight: 'bold', color: 'red' }}>{price} AZN</h1>
+                <div>
+                    <CiCirclePlus />
+                    <CiCircleMinus />
+                </div>
             </div>
         </div>
     )
