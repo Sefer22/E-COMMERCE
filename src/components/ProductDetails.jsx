@@ -34,8 +34,12 @@ function ProductDetails() {
                 <h1 style={{ fontFamily: 'arial' }}>{title}</h1>
                 <p style={{ fontFamily: 'arial', fontSize: '20px' }}>{description}</p>
                 <h1 style={{ fontSize: '50px', fontFamily: 'arial', fontWeight: 'bold', color: 'red' }}>{price} AZN</h1>
-                <div className='flex-row'>
-                    <CiCirclePlus style={{ fontSize: '40px' }} /><span style={{ fontSize: '35px' }}>0</span> <CiCircleMinus style={{ fontSize: '40px' }} />
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <CiCirclePlus style={{ fontSize: '40px', marginRight: '5px' }} /><span style={{ fontSize: '35px' }}>0</span>
+                    <CiCircleMinus style={{ fontSize: '40px', marginLeft: '5px' }} />
+                </div>
+                <div>
+                    <button style={{ marginTop: '25px', border: 'none', padding: '20px', backgroundColor: 'orange', borderRadius: '5px' }}>Add to basket</button>
                 </div>
             </div>
         </div>
