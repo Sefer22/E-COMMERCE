@@ -34,9 +34,8 @@ function ProductDetails() {
                 <h1 style={{ fontFamily: 'arial' }}>{title}</h1>
                 <p style={{ fontFamily: 'arial', fontSize: '20px' }}>{description}</p>
                 <h1 style={{ fontSize: '50px', fontFamily: 'arial', fontWeight: 'bold', color: 'red' }}>{price} AZN</h1>
-                <div>
-                    <CiCirclePlus />
-                    <CiCircleMinus />
+                <div className='flex-row'>
+                    <CiCirclePlus style={{ fontSize: '40px' }} /><span style={{ fontSize: '35px' }}>0</span> <CiCircleMinus style={{ fontSize: '40px' }} />
                 </div>
             </div>
         </div>
