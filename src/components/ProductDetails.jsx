@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
+import { setSelectedProduct } from '../redux/slices/productSlice';
 
 function ProductDetails() {
     const { id } = useParams();
     const { products } = useSelector((store) => store.product);
+
+    const dispatch = useDispatch();
 
     useEffect(() => {
         getProductById();
@@ -13,7 +16,7 @@ function ProductDetails() {
     const getProductById = () => {
         products && products.map((product) => {
             if (product.id == id) {
-
+                dispatch(setSelectedProduct(product));
             }
         })
     }
