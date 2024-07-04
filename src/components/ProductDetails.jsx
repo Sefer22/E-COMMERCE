@@ -5,7 +5,7 @@ import { setSelectedProduct } from '../redux/slices/productSlice';
 
 function ProductDetails() {
     const { id } = useParams();
-    const { products } = useSelector((store) => store.product);
+    const { products, selectedProduct } = useSelector((store) => store.product);
 
     const dispatch = useDispatch();
 
@@ -22,7 +22,7 @@ function ProductDetails() {
     }
 
     return (
-        <div>ProductDetails {id}</div>
+        <div>{selectedProduct.title}</div>
     )
 }
 
