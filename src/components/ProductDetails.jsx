@@ -24,8 +24,8 @@ function ProductDetails() {
     }
 
     return (
-        <div style={{ marginTop: '30px' }}>
-            <div>
+        <div style={{ marginTop: '30px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ marginRight: '40px' }}>
                 <img src={image} width={300} height={500} alt="" />
             </div>
             <div>
