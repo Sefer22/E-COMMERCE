@@ -44,8 +44,8 @@ function ProductDetails() {
                 <p style={{ fontFamily: 'arial', fontSize: '20px' }}>{description}</p>
                 <h1 style={{ fontSize: '50px', fontFamily: 'arial', fontWeight: 'bold', color: 'red' }}>{price} AZN</h1>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <CiCirclePlus style={{ fontSize: '40px', marginRight: '5px' }} /><span style={{ fontSize: '35px' }}>{count}</span>
-                    <CiCircleMinus style={{ fontSize: '40px', marginLeft: '5px' }} />
+                    <CiCirclePlus onClick={increment} style={{ fontSize: '40px', marginRight: '5px' }} /><span style={{ fontSize: '35px' }}>{count}</span>
+                    <CiCircleMinus onClick={decrement} style={{ fontSize: '40px', marginLeft: '5px' }} />
                 </div>
                 <div>
                     <button style={{ marginTop: '25px', border: 'none', padding: '10px', color: '#fff', backgroundColor: 'orange', borderRadius: '5px' }}>Add to basket</button>
