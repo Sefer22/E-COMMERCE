@@ -25,7 +25,7 @@ function Header() {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div className='flex-row' onClick={() =>}>
+            <div className='flex-row' onClick={() => navigate("/")}>
                 <img className="logo" src="./src/images/logo.png" />
                 <p className='logo-text'>Safar C.</p>
             </div>
