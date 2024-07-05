@@ -21,11 +21,17 @@ export const basketSlice = createSlice({
     initialState,
     reducers: {
         addToBasket: (state, action) => {
-            const findProduct = products && products.find((product) => product.id === action.payload.id);
+            const findProduct = state.products && state.products.find((product) => product.id === action.payload.id);
+            if (findProduct) {
+                //added before
+            } else {
+                state.products = [...state.products, action.payload];
+                writeFromBasketToStorage(state.products);
+            }
         }
     }
 })
 
-export const { } = basketSlice.actions
+export const { addToBasket } = basketSlice.actions
 
 export default basketSlice.reducer

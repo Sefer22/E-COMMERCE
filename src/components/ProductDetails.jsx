@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { setSelectedProduct } from '../redux/slices/productSlice';
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
+import { addToBasket } from '../redux/slices/basketSlice';
 
 function ProductDetails() {
     const { id } = useParams();
@@ -20,6 +21,18 @@ function ProductDetails() {
     }
     const decrement = () => {
         setCount(count - 1);
+    }
+
+    const addBasket = () => {
+        const payload = {
+            id,
+            price,
+            image,
+            title,
+            description,
+            count
+        }
+        dispatch(addToBasket(payload));
     }
 
     useEffect(() => {
@@ -48,7 +61,7 @@ function ProductDetails() {
                     <CiCircleMinus onClick={decrement} style={{ fontSize: '40px', marginLeft: '15px' }} />
                 </div>
                 <div>
-                    <button style={{ marginTop: '25px', border: 'none', padding: '10px', color: '#fff', backgroundColor: 'orange', borderRadius: '5px' }}>Add to basket</button>
+                    <button onClick={addBasket} style={{ marginTop: '25px', border: 'none', padding: '10px', color: '#fff', backgroundColor: 'orange', borderRadius: '5px' }}>Add to basket</button>
                 </div>
             </div>
         </div>
