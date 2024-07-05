@@ -16,7 +16,7 @@ function ProductDetails() {
     const dispatch = useDispatch();
 
     const increment = () => {
-
+        setCount(count + 1);
     }
 
     useEffect(() => {
