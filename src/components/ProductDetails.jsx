@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { setSelectedProduct } from '../redux/slices/productSlice';
@@ -10,6 +10,8 @@ function ProductDetails() {
     const { products, selectedProduct } = useSelector((store) => store.product);
 
     const { price, image, title, description } = selectedProduct;
+
+    const [count, setCount] = useState(0);
 
     const dispatch = useDispatch();
 
