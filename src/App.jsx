@@ -19,7 +19,12 @@ function App() {
         <Drawer className='drawer' anchor='right' open={true}>
           {
             products && products.map((product) => {
-
+              return (
+                <div>
+                  <img src={product.image} width={50} height={50} />
+                  <p>{product.title}</p>
+                </div>
+              )
             })
           }
         </Drawer>
