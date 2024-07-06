@@ -9,7 +9,7 @@ const getBasketFromStorage = () => {
 
 const initialState = {
     products: getBasketFromStorage(),
-
+    drawer: false
 }
 
 const writeFromBasketToStorage = (basket) => {
@@ -32,6 +32,9 @@ export const basketSlice = createSlice({
                 state.products = [...state.products, action.payload];
                 writeFromBasketToStorage(state.products);
             }
+        },
+        setDrawer: (state, action) => {
+            state.drawer = !state.drawer;
         }
     }
 })

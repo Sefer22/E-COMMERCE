@@ -23,8 +23,8 @@ function App() {
                 <div className='flex-row' style={{ padding: '20px' }}>
                   <img style={{ marginRight: '5px' }} src={product.image} width={50} height={50} />
                   <p style={{ width: '350px', marginRight: '5px' }}>{product.title}({product.count})</p>
-                  <p style={{ fontWeight: 'bold', marginRight: '10px' }}>{product.price} AZN</p>
-                  <button style={{ padding: '5px', borderRadius: '5px', backgroundColor: 'red', border: 'none', color: '#fff', width: '100px' }}>Delete</button>
+                  <p style={{ fontWeight: 'bold', marginRight: '10px', width: '60px' }}>{product.price} AZN</p>
+                  <button style={{ padding: '5px', borderRadius: '5px', backgroundColor: 'red', border: 'none', color: '#fff', width: '50px' }}>Delete</button>
                 </div>
               )
             })
