@@ -12,6 +12,8 @@ function Header() {
 
     const navigate = useNavigate();
 
+    const { products }
+
     const changeTheme = () => {
         const root = document.getElementById('root');
         if (theme) {
