@@ -6,7 +6,7 @@ import { FaMoon } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
 import { useSelector } from 'react-redux';
-import Drawer from '@mui/material/Drawer';
+
 
 function Header() {
 
@@ -44,8 +44,6 @@ function Header() {
                     </Badge>
 
                 </div>
-                <Drawer open={true}>
-                </Drawer>
             </div>
         </div>
     )
