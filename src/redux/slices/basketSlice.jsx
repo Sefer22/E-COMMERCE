@@ -33,12 +33,12 @@ export const basketSlice = createSlice({
                 writeFromBasketToStorage(state.products);
             }
         },
-        setDrawer: (state, action) => {
+        setDrawer: (state) => {
             state.drawer = !state.drawer;
         }
     }
 })
 
-export const { addToBasket } = basketSlice.actions
+export const { addToBasket, setDrawer } = basketSlice.actions
 
 export default basketSlice.reducer

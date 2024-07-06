@@ -10,13 +10,13 @@ import { useSelector } from 'react-redux'
 
 function App() {
 
-  const { products } = useSelector((store) => store.basket);
+  const { products, drawer } = useSelector((store) => store.basket);
 
   return (
     <div>
       <PageContainer>
         <Loading />
-        <Drawer className='drawer' anchor='right' open={true}>
+        <Drawer className='drawer' anchor='right' open={drawer}>
           {
             products && products.map((product) => {
               return (
