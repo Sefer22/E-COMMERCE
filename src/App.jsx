@@ -26,7 +26,7 @@ function App() {
           {
             products && products.map((product) => {
               return (
-                <div>
+                <div key={product.id}>
                   <div className='flex-row' style={{ padding: '20px' }}>
                     <img style={{ marginRight: '5px' }} src={product.image} width={50} height={50} />
                     <p style={{ width: '350px', marginRight: '5px' }}>{product.title}({product.count})</p>
