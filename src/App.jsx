@@ -34,7 +34,7 @@ function App() {
                     <button style={{ padding: '5px', borderRadius: '5px', backgroundColor: 'red', border: 'none', color: '#fff', width: '50px' }}>Delete</button>
                   </div>
                   <div>
-                    <p>Total Amount : {totalAmount}</p>
+                    <p style={{ textAlign: 'center' }}>Total Amount : {totalAmount}</p>
                   </div>
                 </div>
               )
