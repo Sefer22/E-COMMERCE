@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import PageContainer from './container/PageContainer'
 import Header from './components/Header'
@@ -6,13 +6,17 @@ import RouterConfig from './config/RouterConfig'
 import Loading from './components/Loading'
 import Drawer from '@mui/material/Drawer';
 import { useDispatch, useSelector } from 'react-redux'
-import { setDrawer } from './redux/slices/basketSlice'
+import { calculateBasket, setDrawer } from './redux/slices/basketSlice'
 
 
 function App() {
 
-  const { products, drawer } = useSelector((store) => store.basket);
+  const { products, drawer, totalAmount } = useSelector((store) => store.basket);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(calculateBasket());
+  }, [])
 
   return (
     <div>
@@ -29,7 +33,9 @@ function App() {
                     <p style={{ fontWeight: 'bold', marginRight: '10px', width: '60px' }}>{product.price} AZN</p>
                     <button style={{ padding: '5px', borderRadius: '5px', backgroundColor: 'red', border: 'none', color: '#fff', width: '50px' }}>Delete</button>
                   </div>
-                  <h2></h2>
+                  <div>
+                    <p>Total Amount : {totalAmount}</p>
+                  </div>
                 </div>
               )
             })

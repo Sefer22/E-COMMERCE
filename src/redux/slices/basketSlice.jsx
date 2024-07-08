@@ -37,7 +37,7 @@ export const basketSlice = createSlice({
         setDrawer: (state) => {
             state.drawer = !state.drawer;
         },
-        calculateBasket: (state, action) => {
+        calculateBasket: (state) => {
             state.products && state.products.map((product) => {
                 state.totalAmount += product.price;
             })
@@ -45,6 +45,6 @@ export const basketSlice = createSlice({
     }
 })
 
-export const { addToBasket, setDrawer } = basketSlice.actions
+export const { addToBasket, setDrawer, calculateBasket } = basketSlice.actions
 
 export default basketSlice.reducer
